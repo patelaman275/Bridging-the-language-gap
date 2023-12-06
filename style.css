@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.feedback-section {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.rating span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+}
+
+.rating span:before {
+    content: '★';
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.rating span:hover:before,
+.rating span:hover ~ span:before {
+    opacity: 1;
+}
